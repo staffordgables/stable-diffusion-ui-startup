@@ -1,6 +1,7 @@
 @echo off
 
 REM start as a Local Administrator
+REM Start Stable Diffusion UI already downloaded and extracted to C:\stable-diffusion-ui
 
 REM Download and install 7-zip
 echo Downloading 7-zip...
@@ -25,6 +26,6 @@ dism.exe /Online /Enable-Feature /FeatureName:OpenSSH.Server
 
 REM Install sample service using NSSM
 echo Installing sample service using NSSM...
-nssm install SampleService "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" "-File C:\sample_script.ps1"
+nssm install "Stable Diffusion UI" "C:\stable-diffusion-ui\Start Stable Diffusion UI.cmd"
 
 echo All processes completed successfully!
